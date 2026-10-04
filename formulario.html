@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro - Camisetas de Fútbol</title>
+</head>
+<body class="pagina-form">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="formulario.html" class="login">INICIAR SESION</a></li>
+        </ul>
+    </nav>
+
+    <main class="form-wrap">
+        <form class="form-card" id="formulario">
+            <h1>Formulario de Registro</h1>
+            <p class="sub">Completa todos los campos para crear tu cuenta</p>
+
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="campo">
+                    <label class="etiqueta" for="nombre">Nombre completo <span class="req">*</span></label>
+                    <input type="text" id="nombre" placeholder="Ej: Carlos Sanchez" required>
+                </div>
+                <div class="campo">
+                    <label class="etiqueta" for="email">Correo electrónico <span class="req">*</span></label>
+                    <input type="email" id="email" placeholder="Ej: carlossanchez8@gmail.com" required>
+                </div>
+                <div class="campo">
+                    <label class="etiqueta" for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="Ej: +54 11 1234-5678">
+                </div>
+                <div class="campo">
+                    <label class="etiqueta" for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información Adicional</legend>
+                <div class="campo">
+                    <label class="etiqueta" for="pais">País <span class="req">*</span></label>
+                    <select id="pais" required>
+                        <option value="">Selecciona un país...</option>
+                        <option>Argentina</option>
+                        <option>Chile</option>
+                        <option>Uruguay</option>
+                        <option>España</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <span class="etiqueta" style="display:block;font-size:.75rem;font-weight:700;margin-bottom:6px">Género</span>
+                    <div class="opciones">
+                        <label class="pill"><input type="radio" name="genero" value="masculino"> Masculino</label>
+                        <label class="pill"><input type="radio" name="genero" value="femenino"> Femenino</label>
+                        <label class="pill"><input type="radio" name="genero" value="otro"> Otro</label>
+                        <label class="pill"><input type="radio" name="genero" value="nodecir" checked> Prefiero no decirlo</label>
+                    </div>
+                </div>
+                <div class="campo">
+                    <span class="etiqueta" style="display:block;font-size:.75rem;font-weight:700;margin-bottom:6px">Equipos favoritos</span>
+                    <div class="opciones">
+                        <label class="pill"><input type="checkbox"> Barcelona</label>
+                        <label class="pill"><input type="checkbox"> Real Madrid</label>
+                        <label class="pill"><input type="checkbox"> Arsenal</label>
+                        <label class="pill"><input type="checkbox"> Manchester United</label>
+                        <label class="pill"><input type="checkbox"> Selecciones</label>
+                    </div>
+                </div>
+                <div class="campo">
+                    <label class="etiqueta" for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" placeholder="Escribe tus comentarios aquí..."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Seguridad</legend>
+                <div class="campo">
+                    <label class="etiqueta" for="pass">Contraseña <span class="req">*</span></label>
+                    <input type="password" id="pass" placeholder="Mínimo 8 caracteres" minlength="8" required>
+                </div>
+                <div class="campo">
+                    <label class="etiqueta" for="pass2">Confirmar contraseña <span class="req">*</span></label>
+                    <input type="password" id="pass2" placeholder="Repite tu contraseña" minlength="8" required>
+                </div>
+            </fieldset>
+
+            <label class="terminos">
+                <input type="checkbox" required>
+                <span>Acepto los <a href="#">términos y condiciones</a></span>
+            </label>
+
+            <div class="botones">
+                <button type="submit" class="btn-enviar">Registrarse</button>
+                <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+            </div>
+            <p id="mensaje"></p>
+        </form>
+    </main>
+
+    <div class="flex-container" id="flex-container">
+        <div class="flex-item">Creditos: Gonzalo Ollari Blascetta</div>
+        <div class="flex-item">Contacto: +54 9 11 5143-1316</div>
+        <div class="flex-item">Redes Sociales: @gonza_ollari</div>
+        <div class="flex-item"><a href="https://github.com/GonzaloOllari">Mi GitHub</a></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('formulario');
+        const mensaje = document.getElementById('mensaje');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (document.getElementById('pass').value !== document.getElementById('pass2').value) {
+                mensaje.style.color = '#ac1838';
+                mensaje.textContent = 'Las contraseñas no coinciden.';
+                return;
+            }
+            mensaje.style.color = '#1a7f37';
+            mensaje.textContent = 'Registro exitoso.';
+        });
+        form.addEventListener('reset', function () { mensaje.textContent = ''; });
+    </script>
+</body>
+</html>
