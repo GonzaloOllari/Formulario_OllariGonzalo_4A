@@ -247,7 +247,7 @@ section > h2 {
 .especificaciones li {
     font-size: 0.9rem;
     padding: 6px 0;
-    border-bottom: 1px solid #e4e4ea;
+    border-bottom: 1px solid #43435e;
 }
 .especificaciones li:last-child {
     border-bottom: none;
