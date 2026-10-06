@@ -284,7 +284,7 @@ section > h2{
  
  
 .pagina-form{
-    background:linear-gradient(160deg,var(--azul),var(--rojo));
+    background:#1f064d;
     min-height:100vh;
 }
 .pagina-form .navbar{
