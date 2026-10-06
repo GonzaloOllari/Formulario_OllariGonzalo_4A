@@ -112,20 +112,6 @@
         <div class="flex-item"><a href="https://github.com/GonzaloOllari">Mi GitHub</a></div>
     </div>
 
-    <script>
-        const form = document.getElementById('formulario');
-        const mensaje = document.getElementById('mensaje');
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (document.getElementById('pass').value !== document.getElementById('pass2').value) {
-                mensaje.style.color = '#ac1838';
-                mensaje.textContent = 'Las contraseñas no coinciden.';
-                return;
-            }
-            mensaje.style.color = '#1a7f37';
-            mensaje.textContent = 'Registro exitoso.';
-        });
-        form.addEventListener('reset', function () { mensaje.textContent = ''; });
-    </script>
+    
 </body>
 </html>
