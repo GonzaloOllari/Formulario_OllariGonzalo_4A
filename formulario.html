@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Inicio de Sesion Jerseys Hub</title>
+    <title>Registrarse Jerseys Hub</title>
 </head>
 <body class="pagina-form">
     <nav class="navbar">
@@ -17,27 +17,27 @@
         </ul>
     </nav>
 
-    <main class="form-wrap">
-        <form class="form-card" id="formulario">
+    <main class="contenedor-form">
+        <form class="caja-form" id="formulario">
             <h1>Formulario de Registro</h1>
-            <p class="sub">Completa todos los campos para crear tu cuenta</p>
+            <p class="subtitulo">Completa todos los campos para crear tu cuenta</p>
 
             <fieldset>
                 <legend>Datos Personales</legend>
                 <div class="campo">
-                    <label class="etiqueta" for="nombre">Nombre completo <span class="req">*</span></label>
+                    <label class="texto-campo" for="nombre">Nombre completo <span class="obligatorio">*</span></label>
                     <input type="text" id="nombre" placeholder="Ej: Carlos Sanchez" required>
                 </div>
                 <div class="campo">
-                    <label class="etiqueta" for="email">Correo electrónico <span class="req">*</span></label>
+                    <label class="texto-campo" for="email">Correo electrónico <span class="obligatorio">*</span></label>
                     <input type="email" id="email" placeholder="Ej: carlossanchez8@gmail.com" required>
                 </div>
                 <div class="campo">
-                    <label class="etiqueta" for="telefono">Teléfono</label>
+                    <label class="texto-campo" for="telefono">Teléfono</label>
                     <input type="tel" id="telefono" placeholder="Ej: +54 11 1234-5678">
                 </div>
                 <div class="campo">
-                    <label class="etiqueta" for="nacimiento">Fecha de nacimiento</label>
+                    <label class="texto-campo" for="nacimiento">Fecha de nacimiento</label>
                     <input type="date" id="nacimiento">
                 </div>
             </fieldset>
@@ -45,7 +45,7 @@
             <fieldset>
                 <legend>Información Adicional</legend>
                 <div class="campo">
-                    <label class="etiqueta" for="pais">País <span class="req">*</span></label>
+                    <label class="texto-campo" for="pais">País <span class="obligatorio">*</span></label>
                     <select id="pais" required>
                         <option value="">Selecciona un país...</option>
                         <option>Argentina</option>
@@ -56,26 +56,26 @@
                     </select>
                 </div>
                 <div class="campo">
-                    <span class="etiqueta" style="display:block;font-size:.75rem;font-weight:700;margin-bottom:6px">Género</span>
+                    <span class="texto-campo" style="display:block;font-size:.75rem;font-weight:700;margin-bottom:6px">Género</span>
                     <div class="opciones">
-                        <label class="pill"><input type="radio" name="genero" value="masculino"> Masculino</label>
-                        <label class="pill"><input type="radio" name="genero" value="femenino"> Femenino</label>
-                        <label class="pill"><input type="radio" name="genero" value="otro"> Otro</label>
-                        <label class="pill"><input type="radio" name="genero" value="nodecir" checked> Prefiero no decirlo</label>
+                        <label class="opcion"><input type="radio" name="genero" value="masculino"> Masculino</label>
+                        <label class="opcion"><input type="radio" name="genero" value="femenino"> Femenino</label>
+                        <label class="opcion"><input type="radio" name="genero" value="otro"> Otro</label>
+                        <label class="opcion"><input type="radio" name="genero" value="nodecir" checked> Prefiero no decirlo</label>
                     </div>
                 </div>
                 <div class="campo">
-                    <span class="etiqueta" style="display:block;font-size:.75rem;font-weight:700;margin-bottom:6px">Equipos favoritos</span>
+                    <span class="texto-campo" style="display:block;font-size:.75rem;font-weight:700;margin-bottom:6px">Equipos favoritos</span>
                     <div class="opciones">
-                        <label class="pill"><input type="checkbox"> Barcelona</label>
-                        <label class="pill"><input type="checkbox"> Real Madrid</label>
-                        <label class="pill"><input type="checkbox"> Arsenal</label>
-                        <label class="pill"><input type="checkbox"> Manchester United</label>
-                        <label class="pill"><input type="checkbox"> Selecciones</label>
+                        <label class="opcion"><input type="checkbox"> Barcelona</label>
+                        <label class="opcion"><input type="checkbox"> Real Madrid</label>
+                        <label class="opcion"><input type="checkbox"> Arsenal</label>
+                        <label class="opcion"><input type="checkbox"> Manchester United</label>
+                        <label class="opcion"><input type="checkbox"> Selecciones</label>
                     </div>
                 </div>
                 <div class="campo">
-                    <label class="etiqueta" for="comentarios">Comentarios</label>
+                    <label class="texto-campo" for="comentarios">Comentarios</label>
                     <textarea id="comentarios" placeholder="Escribe tus comentarios aquí..."></textarea>
                 </div>
             </fieldset>
@@ -83,11 +83,11 @@
             <fieldset>
                 <legend>Seguridad</legend>
                 <div class="campo">
-                    <label class="etiqueta" for="pass">Contraseña <span class="req">*</span></label>
+                    <label class="texto-campo" for="pass">Contraseña <span class="obligatorio">*</span></label>
                     <input type="password" id="pass" placeholder="Mínimo 8 caracteres" minlength="8" required>
                 </div>
                 <div class="campo">
-                    <label class="etiqueta" for="pass2">Confirmar contraseña <span class="req">*</span></label>
+                    <label class="texto-campo" for="pass2">Confirmar contraseña <span class="obligatorio">*</span></label>
                     <input type="password" id="pass2" placeholder="Repite tu contraseña" minlength="8" required>
                 </div>
             </fieldset>
@@ -101,7 +101,7 @@
                 <button type="submit" class="btn-enviar">Registrarse</button>
                 <button type="reset" class="btn-limpiar">Limpiar formulario</button>
             </div>
-            <p id="mensaje"></p>
+            
         </form>
     </main>
 
